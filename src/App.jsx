@@ -8,6 +8,11 @@ import Mainbar from './components/Mainbar'
 function App() {
 	const [notes, setNotes] = useState([]);
 
+	const onDeleteNote = (id) => {
+		console.log(`Deleted ${id}`);
+		setNotes(notes.filter((note) => note.id !== id))
+	}
+
 	const onAddNote = () => {
 		console.log('added');
 		const newNote = {
@@ -21,7 +26,7 @@ function App() {
 
   return (
     <div className="app__container">
-			<Sidebar notes={notes} onAddNote={onAddNote}/>
+			<Sidebar notes={notes} onAddNote={onAddNote} onDeleteNote={onDeleteNote}/>
 			<Mainbar/>
     </div>
   );
