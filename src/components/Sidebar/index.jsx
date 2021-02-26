@@ -14,7 +14,7 @@ const Sidebar = () => {
 							<button>Delete</button>
 						</div>
 						<p>Note preview</p>
-						<small className="note-meta"></small>
+						<small className="note-meta">Last Modified [date]</small>
 					</div>
 				</div>
 			</div>
