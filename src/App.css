@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+.app__container {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: center;
+}
+
 /* GLOBAL STYLES */
 
 body,
@@ -102,7 +109,7 @@ button:hover {
   text-align: center;
   font-size: 2rem;
   color: #999;
-}
+} 
 
 /* Editing */
 .app__main-note-edit {
@@ -128,18 +135,18 @@ textarea {
 
 /* Preview */
 .app__main-note-preview {
-  border-top: 1px solid #ddd;
-  overflow-y: scroll;
-  background: rgba(0, 0, 0, 0.02);
+	border-top: 1px solid #ddd;
+	overflow-y: scroll;
+	background: rgba(0, 0, 0, 0.02);
 }
 
 .preview__title {
-  padding: 25px 25px 0 25px;
-  margin: 0;
+	padding: 25px 25px 0 25px;
+	margin: 0;
 }
 
 .markdown__preview {
-  padding: 0 25px 25px 25px;
-  font-size: 1rem;
-  line-height: 2rem;
+	padding: 0 25px 25px 25px;
+	font-size: 1rem;
+	line-height: 2rem;
 }
