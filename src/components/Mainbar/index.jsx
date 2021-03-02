@@ -1,20 +1,44 @@
-import React from 'react'
+import React from 'react';
+  
+import ReactMarkdown from "react-markdown";
 
-const Mainbar = () => {
-	return (
-		<div className="app__main">
-			<div className="app__main-note-edit">
-				<input type="text" id="title" autoFocus/>
-				<textarea id="body" placeholder="Write your text here..."/>
-			</div>
-			<div className="app__main-note-preview">
-				<h1 className="preview__title">TITLE</h1>
-				<div className="markdown__preview">
-					note preview
-				</div>
-			</div>
-		</div>
-	)
+const Mainbar = ({ activeNote, onUpdateNote }) => {
+const onEditField = (field, value) => {
+    onUpdateNote({
+      ...activeNote,
+      [field]: value,
+      lastModified: Date.now(),
+    });
+  };
+
+  if (!activeNote) return <div className="no__active-note">No Active Note</div>;
+
+  return (
+    <div className="app-main">
+      <div className="app-main-note-edit">
+        <input
+          type="text"
+          id="title"
+          placeholder="Note Title"
+          value={activeNote.title}
+          onChange={(e) => onEditField("title", e.target.value)}
+          autoFocus
+        />
+        <textarea
+          id="body"
+          placeholder="Write your note here..."
+          value={activeNote.body}
+          onChange={(e) => onEditField("body", e.target.value)}
+        />
+      </div>
+      <div className="app-main-note-preview">
+        <h1 className="preview-title">{activeNote.title}</h1>
+        <ReactMarkdown className="markdown-preview">
+          {activeNote.body}
+        </ReactMarkdown>
+      </div>
+    </div>
+  );
 }
 
 export default Mainbar;

@@ -4,13 +4,6 @@
   box-sizing: border-box;
 }
 
-.app__container {
-	display: flex;
-	flex-direction: row;
-	align-content: center;
-	justify-content: center;
-}
-
 /* GLOBAL STYLES */
 
 body,
@@ -44,79 +37,79 @@ button:hover {
 
 /* SIDEBAR STYLES */
 
-.app__sidebar {
+.app-sidebar {
   width: 30%;
   height: 100vh;
   border-right: 1px solid #ddd;
 }
 
-.app__sidebar-header {
+.app-sidebar-header {
   display: flex;
   justify-content: space-between;
   padding: 25px;
 }
-.app__sidebar-header h1 {
+.app-sidebar-header h1 {
   margin: 0;
 }
 
-.app__sidebar-notes {
+.app-sidebar-notes {
   height: calc(100vh - 78px);
   overflow-y: scroll;
 }
-.app__sidebar-note {
+.app-sidebar-note {
   padding: 25px;
   cursor: pointer;
 }
-.sidebar__note-title {
+.sidebar-note-title {
   display: flex;
   justify-content: space-between;
 }
-.app__sidebar-note button {
+.app-sidebar-note button {
   color: crimson;
 }
-.app__sidebar-note p {
+.app-sidebar-note p {
   margin: 10px 0;
 }
-.app__sidebar-note small {
+.app-sidebar-note small {
   display: block;
   color: #999;
 }
 
-.app__sidebar-note:hover {
+.app-sidebar-note:hover {
   background: #ddd;
 }
-.app__sidebar-note.active,
-.app__sidebar-note.active small {
+.app-sidebar-note.active,
+.app-sidebar-note.active small {
   background: #08c;
   color: white;
 }
 
 /* NOTE EDITOR/PREVIEW (MAIN) STYLES */
 
-.app__main {
+.app-main {
   width: 70%;
   height: 100vh;
 }
-.app__main-note-edit,
-.app__main-note-preview {
+.app-main-note-edit,
+.app-main-note-preview {
   height: 50vh;
 }
 
-.no__active-note {
+.no-active-note {
   width: 70%;
   height: 100vh;
   line-height: 100vh;
   text-align: center;
   font-size: 2rem;
   color: #999;
-} 
+}
 
 /* Editing */
-.app__main-note-edit {
+.app-main-note-edit {
   padding: 25px;
 }
 
-.app__main-note-edit input,
+.app-main-note-edit input,
 textarea {
   display: block;
   border: 1px solid #ddd;
@@ -128,25 +121,25 @@ textarea {
   font-size: inherit;
   font-family: inherit;
 }
-.app__main-note-edit input {
+.app-main-note-edit input {
   height: 50px;
   font-size: 2rem;
 }
 
 /* Preview */
-.app__main-note-preview {
-	border-top: 1px solid #ddd;
-	overflow-y: scroll;
-	background: rgba(0, 0, 0, 0.02);
+.app-main-note-preview {
+  border-top: 1px solid #ddd;
+  overflow-y: scroll;
+  background: rgba(0, 0, 0, 0.02);
 }
 
-.preview__title {
-	padding: 25px 25px 0 25px;
-	margin: 0;
+.preview-title {
+  padding: 25px 25px 0 25px;
+  margin: 0;
 }
 
-.markdown__preview {
-	padding: 0 25px 25px 25px;
-	font-size: 1rem;
-	line-height: 2rem;
+.markdown-preview {
+  padding: 0 25px 25px 25px;
+  font-size: 1rem;
+  line-height: 2rem;
 }
