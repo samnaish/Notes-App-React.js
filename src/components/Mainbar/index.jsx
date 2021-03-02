@@ -11,7 +11,7 @@ const onEditField = (field, value) => {
     });
   };
 
-  if (!activeNote) return <div className="no__active-note">No Active Note</div>;
+  if (!activeNote) return <div className="no-active-note">No Active Note</div>;
 
   return (
     <div className="app-main">
