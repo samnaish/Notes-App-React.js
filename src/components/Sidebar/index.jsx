@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const Sidebar = ({
   notes,
   onAddNote,
@@ -7,7 +8,12 @@ const Sidebar = ({
   activeNote,
   setActiveNote,
 }) => {
-  const sortedNotes = notes.sort((a, b) => b.lastModified - a.lastModified);
+  
+const sortedNotes = notes.sort((a, b) => b.lastModified - a.lastModified);
+
+const Sidebar = ({ notes, onAddNote, onDeleteNote }) => {
+
+
 
   return (
     <div className="app-sidebar">
@@ -26,6 +32,7 @@ const Sidebar = ({
               <button onClick={(e) => onDeleteNote(id)}>Delete</button>
             </div>
 
+
             <p>{body && body.substr(0, 100) + "..."}</p>
             <small className="note-meta">
               Last Modified{" "}
@@ -40,5 +47,6 @@ const Sidebar = ({
     </div>
   );
 };
+
 
 export default Sidebar;
